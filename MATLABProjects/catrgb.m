@@ -1,0 +1,13 @@
+f=imread('E:\微信文件\Desktop\黎小琴数字图像处理\images\fruits.jpg');
+subplot(321),imshow(f),title('原RGB图');
+fR=f(:,:,1);
+fG=f(:,:,2);
+fB=f(:,:,3);
+rgbR=cat(3,fR,zeros(size(fR)),zeros(size(fR)));
+subplot(322),imshow(rgbR),title('红色');
+rgbG=cat(3,zeros(size(fR)),fG,zeros(size(fR)));
+subplot(323),imshow(rgbG),title('绿色');
+rgbB=cat(3,zeros(size(fR)),zeros(size(fR)),fB);
+subplot(324),imshow(rgbB),title('蓝色');
+rgb=cat(3,fR,fG,fB);
+subplot(325),imshow(rgb);title('合成图');
